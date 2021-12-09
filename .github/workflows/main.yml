@@ -2,6 +2,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+     - docs/**
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -17,4 +19,4 @@ jobs:
         server:   ${{ secrets.ftp_host }}
         username: ${{ secrets.ftp_login }}
         password: ${{ secrets.ftp_password }}
-        server-dir: public_html/_actionsGithubTeste/
+        server-dir: public_html/@dev/_actionsGithubTeste/
